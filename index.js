@@ -4,7 +4,7 @@ import initDB from './utils/initDB.js'
 import employeeRoutes from './routes/employee.js'
 
 const app = Express()
-const port = 3237 || process.env.PORT
+const port = process.env.PORT || 3237 
 app.listen(port, () => console.log(`server is running on ${port}`))
 
 initDB()
