@@ -1,0 +1,7 @@
+Employee
+
+id name designation  date
+int varchar varchar  datetime
+
+
+
