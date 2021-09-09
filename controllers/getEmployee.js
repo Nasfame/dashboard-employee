@@ -1,6 +1,6 @@
 import Employee from '../models/employee.js'
 
-const getEmployee = (req, res) => {
+const getEmployee = async (req, res) => {
   Employee.findAll()
     .then(data => res.json(data))
     .catch(err => {

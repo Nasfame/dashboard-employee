@@ -1,7 +1,7 @@
 import Employee from '../models/employee.js'
 
-const deleteEmployee = (req, res) => {
-  const id = +req.params.id
+const deleteEmployee = async (req, res) => {
+  const id = await +req.params.id
   Employee.destroy({ where: { id: id } })
     .then(() => res.json('Successfully deleted'))
     .catch(err => {

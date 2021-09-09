@@ -1,8 +1,8 @@
 import Employee from '../models/employee.js'
 
-const updateEmployee = (req, res) => {
-  const id = +req.params.id
-  const data = req.body
+const updateEmployee = async (req, res) => {
+  const id = await +req.params.id
+  const data = await req.body
 
   Employee.findByPk(id)
     .then(emp => emp.update(data))

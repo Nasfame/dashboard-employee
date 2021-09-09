@@ -1,7 +1,7 @@
 import Employee from '../models/employee.js'
 
-const addEmployee = (req, res) => {
-  const { name, designation } = req.body
+const addEmployee = async (req, res) => {
+  const { name, designation } = await req.body
   Employee.create({ name, designation })
     .then(emp => res.json('Success'))
     .catch(err => {
