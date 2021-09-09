@@ -1,0 +1,23 @@
+GET  http://localhost:3237/
+
+###
+GET  http://localhost:3237/employee
+
+###
+POST  http://localhost:3237/employee HTTP/1.1
+content-type: application/json
+
+{   "name":"Baymax",
+    "designation":"Developer"
+}
+
+###
+DELETE  http://localhost:3237/employee/1
+
+###
+PATCH   http://localhost:3237/employee/2 HTTP/1.1
+content-type: application/json
+
+{   "name":"Hiro",
+    "designation":"DevOPS"
+}
